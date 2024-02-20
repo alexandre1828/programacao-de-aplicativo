@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+
+    int i;
+    int somanota;
+    int mes;
+    int vmd;
+    int emax;
+    int tr;
+    int emin;
+    int lr;
+    int ea;
+
+    for ( i = 0; i < 3; i++)
+    {
+        printf("digite o %dº mes:",i + 1);
+        scanf("%d",&mes);
+
+        somanota += mes;
+        vmd = (somanota / 3) / 24;
+
+    }
+    printf("vendas media diaria: %d \n",vmd);
+
+    printf("conferindo estoque minimo...... \n");
+
+    printf("digite o tempo de reposiçao do produto:");
+    scanf("%d",&tr);
+
+    emin = tr * vmd;
+
+    printf("estoque minimo : %d \n",emin);
+
+    printf("conferindo estoque maximo...... \n");
+
+
+    printf("digite o lote de reposicao do produto:");
+    scanf("%d",&lr);
+
+    emax = emin + lr;
+
+    printf("estoque maximo : %d \n",emax);
+
+    printf("\n");
+
+    printf("digite a Ea:");
+    scanf("%d",&ea);
+
+
+    if (ea < emin)
+    {
+        printf("comprar \n");
+    }
+
+    else
+    {
+        printf("nao comprar \n");
+    }
+    
+    
+
+
+
+
+}
