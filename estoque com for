@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main{
+
+public static void main(String[] args) {
+    Scanner teclado = new Scanner (System.in);
+    
+    double somames = 0;
+    double vmd = 0;
+    double emin = 0;
+    double emax = 0;
+		
+	for (int i = 1;i<=5 ;i++ ) {
+	 System.out.println("digite o mes:" + i);
+	  double mes = teclado.nextDouble();
+		    
+		    somames += mes;
+	}
+		
+	vmd = (somames / 5) / 25;
+		 System.out.println("venda media diaria:" + vmd);
+		 
+		 
+		System.out.println("digite o tempo de reposiçao do produto:"); 
+		double tr = teclado.nextDouble();
+		
+		
+		emin = tr * vmd;
+		 System.out.println("estoque minimo:" + emin);
+		 
+		 
+		System.out.println("digite o lote de reposiçao do produto:"); 
+		 double lr = teclado.nextDouble();
+		 
+		 
+		 emax = emin + lr;
+		 
+		  System.out.println("estoque maximo:" + emax);
+		  
+		  
+		  System.out.println("digite o ea do produto:"); 
+		 double ea = teclado.nextDouble();
+		 
+		  if (ea < emin)
+    {
+        System.out.println("comprar" );
+    }
+
+    else
+    {
+        System.out.println("nao comprar" );
+    }
+		  
+		 
+		 
+		 
+	}
+}
